@@ -1,0 +1,159 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Warhaven bold";
+    src: url("../font/WarhavenFont_TTF/Warhaven\ Bold.ttf");
+}
+:root {
+    --color-white: #fff;
+    --color-black: #3b2a23;
+    --color-title: #ffcaad;
+    --color-sub-text: #5b5b5b;
+    --color-accent: #9d5958;
+    --color-point: #ff3737;
+    --color-background: #f8f6f5;
+    /* --transition: all 300ms ease-in-out; */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li {
+    list-style: none;
+}
+.title-img {
+    display: flex;
+    max-width: 1920px;
+    justify-content: center;
+    align-items: center;
+}
+.title-img img {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.about-wrap {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    
+
+}
+.about-wrap .content {
+    display: flex;  
+    justify-content: start;
+    max-width: 1600px;
+    gap: 40px;
+}
+.about-wrap .content .InText {
+    flex-basis: 48%;
+}
+.about-wrap .content .InText h2 {
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 60px;
+    color: var(--color-black);
+}
+.about-wrap .content .InText p {
+    line-height: 40px;
+    font-size: 24px;
+    color: var(--color-sub-text);
+    font-family: "Warhaven";
+}
+.about-wrap .content .skill {
+    flex-basis: 48%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    color: var(--color-accent);
+}
+.about-wrap .content .skill h3 {
+    text-align: left;
+    padding-top: 40px;
+   
+}
+.skill .graph-area {
+    line-height: 2; 
+    /* width: 700px; */
+    width: 100%;
+}
+.skill .graph-area .graph {
+    margin-bottom: 0.7em;
+
+}
+.skill .graph-area .graph p {  
+    font-size: 20px; 
+}
+
+.skill .graph-area .graph .progressbar-text  {
+    left: 94% !important;
+    top: 31% !important;
+    white-space:nowrap;
+}
+
+
+@media screen and (max-width: 1240px){
+    .about-wrap {
+        width: 95%;
+    }
+    .about-wrap .content .InText h2 {
+        font-size: 50px;
+    }
+    .about-wrap .content .InText p {
+        line-height: 30px;
+        font-size: 20px
+    }
+    .about-wrap .content .skill {
+      width: 80%;
+    }
+    .skill .graph-area {
+        line-height: 2; 
+        width: 500px;
+    }
+
+}
+@media screen and (max-width: 1000px){
+    .about-wrap .content .InText h2 {
+        font-size: 40px;
+    }
+    .about-wrap .content .InText p {
+        line-height: 25px;
+        font-size: 20px
+    }
+
+    .about-wrap .content .skill {
+        width: 70%;
+    }
+
+    .skill .graph-area {
+        line-height: 2; 
+        width: 400px;
+    }
+    .skill .graph-area .graph p {  
+        font-size: 18px; 
+    }
+
+}
+@media screen and (max-width: 680px){
+    .about-wrap {
+        display: block;
+    }
+    .about-wrap .content {
+        display: block;
+    }
+    .about-wrap .content .InText p {
+        line-height: 25px;
+        font-size: 18px
+    }
+   
+    .skill .graph-area {
+        line-height: 1.5; 
+    }
+    .skill .graph-area .graph p {  
+        font-size: 15px; 
+    }
+  
+}
+
+
+

@@ -1,0 +1,80 @@
+@charset "utf-8";
+@font-face {
+    font-family: "warhaven bold";
+    src: url("../font/WarhavenFont_TTF/Warhaven\ Bold.ttf"),
+}
+:root {
+    --color-white: #fff;
+    --color-black: #3b2a23;
+    --color-title: #ffcaad;
+    --color-sub-text: #5b5b5b;
+    --color-accent: #9d5958;
+    --color-point: #ff3737;
+    --color-background: #f8f6f5;
+    /* --transition: all 300ms ease-in-out; */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.visual {
+    width: 100%;
+    /* padding-top: 50%; */
+    background-color: rgb(171, 171, 255);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+.visual .youtube-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1920px;
+    height: 100%;
+    background-color: black;
+}
+#player {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+}
+.visual .youtube-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.main {
+    max-width: 1600px;
+    font-family: "Warhaven Bold";
+    width: 100%;
+    top: 0;
+    left: 0;
+
+
+}
+.main-text {
+    position: absolute;
+    width: 100%;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.6;
+    text-align: center;
+    font-size: 30px;
+    color: var(--color-white);
+}
+.main-text h2 {}
+
+.main-text p {
+    font-size: 25px;
+}
+#myModal {
+    display: none !important;
+}
+

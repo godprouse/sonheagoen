@@ -1,0 +1,286 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Warhaven bold , Warhaven Regular";
+    src: url("../font/WarhavenFont_TTF/Warhaven\ Bold.ttf");
+}
+:root {
+    --color-white: #fff;
+    --color-black: #3b2a23;
+    --color-title: #ffcaad;
+    --color-sub-text: #5b5b5b;
+    --color-accent: #9d5958;
+    --color-point: #ff3737;
+    --color-background: #f8f6f5;
+    /* --transition: all 300ms ease-in-out; */
+}
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    vertical-align: top;
+}
+body {
+    background-color: var(--color-background);
+    /* position: relative; */
+
+} 
+/* 공통 클래스 */
+.wrap {
+    font-family: "warhaven bold , warhaven Regular";
+    height: 100%;
+    /* max-width: 1600px; */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 모바일 버튼 */
+.m-btn {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 98;
+    cursor: pointer;
+    display: none;
+}
+.m-btn .line {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: var(--color-point);
+    border-radius: 5px;
+    margin: 5px;
+    transition: 1s;
+}
+.m-btn .line:nth-child(2) {
+    width: 30px;
+}
+.m-btn .line:nth-child(3) {
+    width: 30px;
+}
+.m-btn.on .line:nth-child(1) {transform: rotate(45deg) translateY(14px);}
+.m-btn.on .line:nth-child(2) {opacity: 0;}
+.m-btn.on .line:nth-child(3) {transform: rotate(-45deg) translateY(-14px); width: 30px;}
+
+/* 모바일 메뉴 */
+.m-nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    z-index: 97;
+    background-color:var(--color-title);
+    padding: 60px;
+    transition: .5s;
+    height: 100%;
+    font-family: "Warhaven Bold";
+}
+.m-nav.on {
+    right: 0;
+}
+.m-nav .pic {
+    width: 100%;
+    text-align: center;
+}
+
+.m-nav .pic img {
+    margin-top: 4rem;
+    border-radius: 20%;
+    margin-bottom: 2em;
+}
+h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    padding-bottom: 5px;    
+}
+
+.m-nav ul {
+    margin-top: 12px;
+}
+.m-nav ul li {
+    padding: 5px 5px;
+    border-bottom: 1px solid #000;
+    font-size: 1.2em;
+}
+.m-nav ul li a {
+    color: var(--color-black);
+    
+}
+.m-nav ul li a img {
+    width: 30px;
+}
+
+
+/* 헤더영역 */
+.header {
+    font-family: "Warhaven Bold";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-title);
+    z-index: 96;
+}
+.header .container {
+    width: 95%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container h1 {
+    display: flex;
+}
+
+.header .container h1 a {}
+.header .container h1 a img {
+    height: 80px;    
+}
+.header .container h1 a img:hover {
+    
+}
+.header .container nav {
+}
+.header .container nav ul {
+    font-size: 1.2rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+.header .container nav .pc-header li {
+    position: relative;
+}
+
+.header .container nav .pc-header li a {}
+.header .container nav .pc-header li a::after {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-point);
+    bottom: -5px;
+    left: 0;
+    transform: scale(0);
+}
+.header .container nav .pc-header li a:hover {
+    transition: .4s;
+    color: var(--color-point);
+}
+.header .container nav .pc-header li a:hover::after {
+    transform: scale(1);
+    transition: .4s;
+}
+
+.header .container .etc {
+   
+}
+.header .container .etc ul {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+.header .container .etc ul li {}
+.header .container .etc ul li a {}
+.header .container .etc ul li a img {
+    height: 40px;
+    opacity: 50%;
+}
+.header .container .etc ul li a img:hover {
+    opacity: 100%;
+    transition: .2s;
+}
+
+/* 풋터 영역 */
+.footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    bottom: 0;
+    background-color: var(--color-title);
+}
+.footer p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "warhaven Regular";
+    color: var(--color-black);
+}
+@media screen and (max-width: 1240px){
+    .header.container {
+        width: 95%;
+    }
+    .header .container nav ul {
+        font-size: 1rem;
+        gap: 30px;
+    }
+    .visual {
+        width: 100%;
+    }
+    .visual .youtube-area {
+
+    }
+    #player {
+
+    }
+    .visual .youtube-cover {
+    }
+}
+@media screen and (max-width: 760px){
+    .header.container {
+        width: 95%;
+    }
+    .header .container nav ul {
+        display: flex;
+        
+        font-size: .9rem;
+        gap: 30px;
+    }
+  
+}
+@media screen and (max-width: 540px){
+    .m-btn {
+        display: block;
+    }
+    .header.container {
+        width: 95%;
+    }
+
+    /* 로고,아이콘,메뉴바 제거 */
+    .header .container nav {
+        display: none;
+    }
+    .header .container h1 {
+        display: none;
+     }
+     .header .container .etc {
+        display: none;
+     }
+
+    .visual {
+        width: 100%;
+        object-fit: fill;
+    }
+    .visual .youtube-area {
+        object-fit: fill;
+    }
+    #player {
+        object-fit: fill;
+    }
+    .visual .youtube-cover {
+        object-fit: fill;
+    }
+}

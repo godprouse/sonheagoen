@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <!-- common css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- js -->
+    <!-- main js -->
+    <script src="js/contact.js"></script>
+    <script src="js/commom.js"></script>
+</head>
+<body>
+    <div class="warp">
+        <!-- mobile-btn -->
+        <div class="m-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div> 
+        <!-- mobile-menu -->
+        <div class="m-nav">
+            <div class="pic">
+                <img src="image/로고.png" alt="">
+            </div>
+            <h3>영상편집자<br>손해근</h3>
+            <ul>
+                <li><a href="index.html">
+                    <img src="image/로고2.png" alt="">HOME
+                </a>
+                </li>
+                <li><a href="work.html">
+                    <img src="image/로고2.png" alt="">WORK
+                </a>
+                </li>
+                <li><a href="about.html">
+                    <img src="image/로고2.png" alt="">ABOUT
+                </a>
+                </li>
+                <li><a href="contact.html">
+                    <img src="image/로고2.png" alt="">CONTACT
+                </a>
+                </li>
+            </ul>
+        </div>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <h1><a href="index.html"><img src="image/로고.png" alt="로고"></a></h1>
+                <nav>
+                    <ul class="pc-header">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="work.html">WORK</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="etc">
+                    <ul>
+                        <li><a href="#"><img src="image/잡코리아.png" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="image/사람인.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- contact -->
+        <div class="contact-warp">
+            <h3>Contact</h3>
+            <div class="content">
+                <div class="desk">
+                    <form action="https://formspree.io/f/mbjvbdgw" method="POST">
+                        <input type="text" name="Name" placeholder="Name" class="name" required>
+                        <input type="email" name="Email" placeholder="Email" class="email" required> 
+                        <textarea name="Message" placeholder="Message..."></textarea>
+                        <input type="submit" value="SEND" class="button">
+                        <input type="reset" class="reset">
+                    </form>
+                </div>
+                <div class="portrait">
+                    <img src="https://via.placeholder.com/500x650" alt="">
+                    <h3>god_prouse@naver.com</h3>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <p>Copyright @ SHG Portfolio, All right reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

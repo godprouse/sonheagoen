@@ -1,0 +1,179 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Warhaven bold";
+    src: url("../font/WarhavenFont_TTF/Warhaven\ Bold.ttf");
+}
+:root {
+    --color-white: #fff;
+    --color-black: #3b2a23;
+    --color-title: #ffcaad;
+    --color-sub-text: #5b5b5b;
+    --color-accent: #9d5958;
+    --color-point: #ff3737;
+    --color-background: #f8f6f5;
+    /* --transition: all 300ms ease-in-out; */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li {
+    list-style: none;
+}
+body {}
+
+.work-wrap {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    font-family:"Warhaven bold" ;
+}
+.work-wrap h3 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+   
+}
+.work-wrap .work-space {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px
+}
+.work-wrap .work-space .tabmenu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; 
+    
+}
+.work-wrap .work-space .tabmenu li {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.work-wrap .work-space .tabmenu li a {
+    color: var(--color-accent);
+}
+.work-wrap .work-space .tabmenu li a:hover {
+    transition: .2s;
+    color: var(--color-point);
+}
+.work-wrap .tabs {
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+}
+
+.work-wrap .tabs #tab-1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.work-wrap .tabs #tab-1 li{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.work-wrap .tabs #tab-1 li img {
+    width: 100%;
+    height: 100%;
+}
+.work-wrap .tabs #tab-2 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: auto;
+    gap: 20px; 
+}
+.work-wrap .tabs #tab-2 li{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.work-wrap .tabs #tab-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 모달창 */
+.modal,
+.modal2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.modal.show,
+.modal2.show {
+    display: block;
+}
+
+.modal .dim,
+.modal2 .dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000ce;
+}
+.modal .dim::after,
+.modal2 .dim::after {
+    content: 'X';
+    background-color: var(--color-accent);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.modal .item_box,
+.modal2 .item_box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1220px;
+    height: 686px;
+}
+.modal .item_box iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modal2 .item_box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 1240px){
+    
+}
+@media screen and (max-width: 1000px){
+    .work-wrap .tabs #tab-1,
+    .work-wrap .tabs #tab-2 {
+        grid-template-columns: repeat(3,1fr); 
+    }
+}
+@media screen and (max-width: 680px){
+    .work-wrap .tabs #tab-1,
+    .work-wrap .tabs #tab-2 {
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
